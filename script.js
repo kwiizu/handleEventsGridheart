@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config();
 import axios from 'axios';
 
 export const handleEvents = async (req, res) => {
