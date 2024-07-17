@@ -1,12 +1,15 @@
 'use strict';
 import { createOrgUsecure } from './function/createOrgUsecure.js';
+import { validationResult, body, check } from 'express-validator';
 
 export const handleUsecureEvents = async (req, res) => {
   try {
-    const event = req.body;
-    if (!event.triggerEventType) {
-      res.status(400).send({ error: 'Missing triggerEventType' });
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).send({ errors: errors.array() });
     }
+
+    const event = req.body;
 
     // Hantera specifika eventtyper
     switch (event.triggerEventType) {
