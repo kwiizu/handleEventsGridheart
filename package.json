@@ -1,10 +1,11 @@
 {
-  "name": "usecuremiddlewaregridheart",
+  "name": "handleeventgridheart",
   "version": "1.0.0",
-  "description": "middleware between gridheart webhook and usecure api",
-  "main": "server.js",
+  "description": "Gridheart API handle webhooks",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
-    "getUsage": "node getUsage.js",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

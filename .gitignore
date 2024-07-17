@@ -1,4 +1,4 @@
 package-lock.json
-test.js
 .env
-index.html
+node_module
+note.js

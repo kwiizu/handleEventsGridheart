@@ -1,7 +1,7 @@
 'use strict';
 
 import express from 'express';
-import { handleEvents } from './script.js';
+import { handleUsecureEvents } from './src/handleUsecureEvents.js';
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -9,7 +9,10 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 // Define a route to handle incoming requests
-app.post('/', handleEvents);
+app.get('/', (req, res) => {
+  res.send('Hello world!');
+});
+app.post('/usecure', handleUsecureEvents);
 
 // Start the Express server
 app.listen(port, () => {

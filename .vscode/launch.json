@@ -7,9 +7,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch handleSubscriptionCreated",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\getUsage.js"
+      "program": "${workspaceFolder}\\src\\function\\handleSubscriptionCreated.js"
     },
     {
       "type": "node",
@@ -17,6 +17,13 @@
       "name": "Launch server",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\server.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch createOrgUsecure",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\function\\createOrgUsecure.js"
     }
   ]
 }
